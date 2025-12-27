@@ -47,6 +47,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
+                            
                             <div class="sb-sidenav-menu-heading">Management</div>
                             <a class="nav-link" href="/project-web-s5/web-rental-outdor/public/erp/products.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
@@ -55,6 +56,12 @@
                             <a class="nav-link" href="/project-web-s5/web-rental-outdor/public/erp/transactions.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
                                 Transaksi
+                            </a>
+                            
+                            <div class="sb-sidenav-menu-heading">Financial</div>
+                            <a class="nav-link" href="/project-web-s5/web-rental-outdor/public/erp/financial_report.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                                Laporan Keuangan
                             </a>
                         </div>
                     </div>
