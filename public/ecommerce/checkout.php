@@ -99,7 +99,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 require_once '../../includes/shop_header.php';
 ?>
+<?php
+require_once '../../config/db.php';
+require_once '../../includes/auth.php';
 
+require_login();
+require_role('customer');
+
+if (empty($_SESSION['cart'])) {
+    header('Location: index.php');
+    exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // ... kode POST yang sudah ada ...
+}
+
+// Hitung total untuk ditampilkan di view
+$total_amount = 0;
+foreach ($_SESSION['cart'] as $item) {
+    $total_amount += $item['subtotal'];
+}
+
+require_once '../../includes/shop_header.php';
+?>
 <div class="container mt-4">
     <h2 class="mb-4">Checkout</h2>
     
@@ -154,7 +177,7 @@ require_once '../../includes/shop_header.php';
                                 <div>
                                     <h6 class="my-0"><?php echo htmlspecialchars($item['name']); ?></h6>
                                     <small class="text-muted">
-                                        <?php echo $item['qty']; ?> x Rp <?php echo number_format($item['price'], 0, ',', '.'); ?><br>
+                                        <?php echo $item['qty']; ?> x Rp <?php echo number_format($item['price_per_day'], 0, ',', '.'); ?><br>
                                         Durasi: <?php echo $item['days']; ?> Hari<br>
                                         <span class="text-info"><?php echo $item['start_date']; ?> s/d <?php echo $item['end_date']; ?></span>
                                     </small>
