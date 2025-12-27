@@ -6,7 +6,7 @@ Website Admin & E-Commerce build with PHP Native & Bootstrap.
 ### 1. Copy project ke `htdocs`
 1. Pastikan sudah menginstall XAMPP.
 2. Copy folder project ini ke direktori `htdocs`:
-   - Windows: `C:\xampp\htdocs\project-web-s5/web-rental-outdor`
+   - Windows: `C:\xampp\htdocs\project-web-s5\web-rental-outdor`
    - macOS: `/Applications/XAMPP/htdocs/project-web-s5/web-rental-outdor` (atau sesuai lokasi XAMPP kamu)
 
 > Nama folder bebas, tapi sesuaikan juga dengan konfigurasi path di dalam project jika kamu mengubahnya.
